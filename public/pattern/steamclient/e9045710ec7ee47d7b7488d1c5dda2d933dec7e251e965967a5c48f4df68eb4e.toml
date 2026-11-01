@@ -6,12 +6,22 @@ sig = "48 8B C4 55 48 8D 68 A1 48 81 EC C0 00 00 00 48 89 70 18"
 [0xC37F2D8E]
 name = "BuildDepotDependency"
 rva = "0x4D75C0"
-sig = "48 8B C4 4C 89 48 20 89 50 10 48 89 48 08 55 48 8D A8"
+sig = "48 8B C4 4C 89 48 20 89 50 10 48 89 48 08 55 48 8D A8 ?? ?? FF FF 48 81 EC"
 
 [0xDB78B4AE]
 name = "BuildSpawnEnvBlock"
 rva = "0x9F7390"
 sig = "4C 89 4C 24 20 4C 89 44 24 18 48 89 54 24 10 48 89 4C 24 08 55 53 56 57 41 54 41 55 41 56 41 57 48 8D AC 24 B8 FE FF FF"
+
+[0x64BF7C45]
+name = "CUtlBufferEnsureCapacity"
+rva = "0xCF4500"
+sig = "48 89 5C 24 08 57 48 83 EC 30 48 8B D9 8D 7A 01"
+
+[0x2D945919]
+name = "CUtlMemoryGrow"
+rva = "0xE93A0"
+sig = "48 89 5C 24 10 57 48 83 EC 30 8B FA 48 8B D9 8B 51 08 8B 49 10 8D 04 39"
 
 [0x4B1B1D77]
 name = "CheckAppOwnership"
@@ -28,16 +38,6 @@ name = "ConfigStoreGetBinary"
 rva = "0x5D9520"
 sig = "40 53 55 56 57 48 83 EC 38 48 63 FA 49 8B E9"
 
-[0x64BF7C45]
-name = "CUtlBufferEnsureCapacity"
-rva = "0xCF4500"
-sig = "48 89 5C 24 08 57 48 83 EC 30 48 8B D9 8D 7A 01"
-
-[0x2D945919]
-name = "CUtlMemoryGrow"
-rva = "0xE93A0"
-sig = "48 89 5C 24 10 57 48 83 EC 30 8B FA 48 8B D9 8B 51 08 8B 49 10 8D 04 39 3B C2 0F 8E ?? ?? ?? ?? 2B CA 48 89 74 24 40 8D 34 39 85 F6 7F 28 4C 8D 05 ?? ?? ?? ?? BA E6 01 00 00 48 8D 0D ?? ?? ?? ?? FF 15 ?? ?? ?? ?? 84 C0 75 0B FF 15 DF 50"
-
 [0xAC76B47D]
 name = "GetAppDataFromAppInfo"
 rva = "0x4C8E40"
@@ -46,7 +46,7 @@ sig = "40 53 55 56 57 41 56 41 57 48 81 EC 78 01 00 00"
 [0xA185DB47]
 name = "GetAppIDForCurrentPipe"
 rva = "0x98EDA0"
-sig = "8B 81 ?? ?? 00 00 83 F8 FF 74 ?? 44 8B 89 D8 00"
+sig = "8B 81 D0 10 00 00 83 F8 FF 74 ??"
 
 [0xCC79542C]
 name = "GetOrAddAppData"
@@ -96,7 +96,7 @@ sig = "48 89 5C 24 20 89 54 24 10 55 56 57 48 83 EC 20"
 [0x06631030]
 name = "OptedInMask"
 rva = "0x6047F0"
-sig = "89 54 24 10 55 53 56 57 41 55 41 56 48 8D AC 24"
+sig = "89 54 24 10 55 53 56 57 41 55 41 56 48 8D AC 24 38 FF FF FF"
 
 [0x0F926D0A]
 name = "PchMsgNameFromEMsg"
@@ -106,12 +106,12 @@ sig = "48 89 5C 24 08 57 48 83 EC 20 8B D9 E8 ?? ?? ?? ??"
 [0x103B52AA]
 name = "ProcessPendingLicenseUpdates"
 rva = "0x9D52E0"
-sig = "41 56 41 57 48 83 EC 38 83 B9 ?? 24 00 00 00"
+sig = "41 56 41 57 48 83 EC 38 83 B9 ?? ?? 00 00 00 B8 ?? ?? 00 00"
 
 [0x836FF9F0]
 name = "RecvPkt"
 rva = "0x5BC990"
-sig = "48 8B C4 55 48 8D A8 ?? ?? ?? ?? 48 81 EC ?? ?? 00 00 48 89 58 08 48 8B DA"
+sig = "48 8B C4 55 48 8D A8 E8 FB FF FF"
 
 [0x68211B4D]
 name = "SendCallbackToPipe"
@@ -121,4 +121,9 @@ sig = "48 89 5C 24 08 57 48 83 EC 30 41 8B D9 41 8B F8"
 [0x7D1EC415]
 name = "SpawnProcess"
 rva = "0x9F8B80"
-sig = "48 89 5C 24 18 4C 89 4C 24 20 48 89 54 24 10 55 56 57 41 54 41 55 41 56 41 57 48 8D"
+sig = "48 89 5C 24 18 4C 89 4C 24 20 48 89 54 24 10 55 56 57 41 54 41 55 41 56 41 57 48 8D AC 24 20 FF FF FF"
+
+[0x2EF6D763]
+name = "YldLoadDepotManifest"
+rva = "0x4D9A10"
+sig = "48 89 6C 24 ? 56 41 54 41 55 41 56 41 57 48 83 EC 40 8B 41"
