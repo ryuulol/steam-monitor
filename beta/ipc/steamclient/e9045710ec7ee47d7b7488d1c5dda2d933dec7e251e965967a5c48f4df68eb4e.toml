@@ -1,11 +1,11 @@
 [IClientUser]
 interface_id = 1
-vtable_rva = "0x1301A60"
+vtable_rva = "0x1329288"
 
 [IClientUser.GetSteamID]
 method_index = 10
 funcHash = "0xD6FC3200"
-wrapper_rva = "0x790E70"
+wrapper_rva = "0x7A2300"
 fencepost = "0xD7058CA5"
 argc = 0
 
@@ -32,18 +32,18 @@ argc = 1
 
 [IClientUtils]
 interface_id = 4
-vtable_rva = "0x1307498"
+vtable_rva = "0x132ECC0"
 
 [IClientUtils.GetAppID]
 method_index = 19
 funcHash = "0x09607EC4"
-wrapper_rva = "0x758120"
+wrapper_rva = "0x769770"
 fencepost = "0x0AFE7552"
 argc = 0
 
 [IClientUtils.GetAPICallResult]
 method_index = 24
 funcHash = "0x2D3D3947"
-wrapper_rva = "0x753F60"
+wrapper_rva = "0x7655B0"
 fencepost = "0x2EDF5EE6"
 argc = 3
